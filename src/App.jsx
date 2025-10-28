@@ -1,12 +1,16 @@
-// App.jsx
-import React from 'react';
+// src/App.jsx
+import React, { useState, useEffect } from 'react';
+
+// Importar componentes desde la carpeta components (rutas relativas)
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import Producto from 'src/components/Producto';
 import Carrito from 'src/components/Carrito';
+import Inicio from 'src/components/Inicio';
+import Moda from 'src/components/Moda';
+import DetalleProducto from 'src/components/DetalleProducto';
 
 // Componente Principal App
-
 export default function App() {
     const [productos, setProductos] = useState([]);
     const [carrito, setCarrito] = useState([]);
@@ -15,13 +19,6 @@ export default function App() {
     const [error, setError] = useState(null);
     const [rutaActual, setRutaActual] = useState('inicio');
     const [productoSeleccionado, setProductoSeleccionado] = useState(null);
-
-
-    return (
-        <div className="min-h-screen flex items-center justify-center">
-            <h1 className="text-3xl font-bold">Mi Tienda React</h1>
-        </div>
-    )
 
     // useEffect para cargar productos de la API
     useEffect(() => {
@@ -38,7 +35,7 @@ export default function App() {
                 setCargando(false);
             })
             .catch(err => {
-                setError(err.message);
+                setError(err.message || 'Error al cargar productos');
                 setCargando(false);
             });
     }, []);
