@@ -6,6 +6,7 @@ import Producto from 'src/components/Producto';
 import Carrito from 'src/components/Carrito';
 
 // Componente Principal App
+
 export default function App() {
     const [productos, setProductos] = useState([]);
     const [carrito, setCarrito] = useState([]);
@@ -14,6 +15,13 @@ export default function App() {
     const [error, setError] = useState(null);
     const [rutaActual, setRutaActual] = useState('inicio');
     const [productoSeleccionado, setProductoSeleccionado] = useState(null);
+
+
+    return (
+        <div className="min-h-screen flex items-center justify-center">
+            <h1 className="text-3xl font-bold">Mi Tienda React</h1>
+        </div>
+    )
 
     // useEffect para cargar productos de la API
     useEffect(() => {
