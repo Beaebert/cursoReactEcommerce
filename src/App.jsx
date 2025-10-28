@@ -2,13 +2,13 @@
 import React, { useState, useEffect } from 'react';
 
 // Importar componentes desde la carpeta components (rutas relativas)
-import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
-import Producto from 'src/components/Producto';
-import Carrito from 'src/components/Carrito';
-import Inicio from 'src/components/Inicio';
-import Moda from 'src/components/Moda';
-import DetalleProducto from 'src/components/DetalleProducto';
+import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
+import Producto from './components/Producto.jsx';
+import Carrito from './components/Carrito.jsx';
+import Inicio from './components/Inicio';
+import Navbar from './components/Navbar.jsx';
+import DetalleProducto from './components/DetalleProducto.jsx';
 
 // Componente Principal App
 export default function App() {
